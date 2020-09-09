@@ -1,0 +1,31 @@
+{
+  "stories": [
+    {
+      "title": "wael1",
+      "created": 1599644430931,
+      "submissionHistory": {},
+      "versions": [
+        "5c40fc49-b172-44c7-9941-aaffbabb0903"
+      ],
+      "id": "0f8291b4-4bd9-4d55-a69a-76364bd40851"
+    }
+  ],
+  "versions": [
+    {
+      "storyId": "0f8291b4-4bd9-4d55-a69a-76364bd40851",
+      "name": "draft",
+      "wordCount": 2,
+      "created": 1599644430956,
+      "statistics": {},
+      "id": "5c40fc49-b172-44c7-9941-aaffbabb0903"
+    }
+  ],
+  "backups": [
+    {
+      "timestamp": 1599644443256,
+      "localPath": "C:\\Users\\wael\\Documents\\BabelWorkspaceBackups\\babel-2020-09-09.backup.zip",
+      "cloudProviders": [],
+      "id": "d8c57b33-3cff-4a07-b5f3-b8b766dc6ea7"
+    }
+  ]
+}
