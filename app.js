@@ -11,11 +11,26 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema: buildSchema(`
+    type Event {
+        _id:ID!
+        title:String!
+        description:String
+        price:Float!
+        date:String!
+
+    }
+    input Eventinput{
+        _id:ID!
+        title:String!
+        description:String
+        price:Float!
+        date:String!
+    }
         type RootQuery {
-            events: [String!]!
+            events: [Event!]!
         }
         type RootMutation {
-            createEvent(name: String): String
+            createEvent(eventinput: Eventinput): Event!
         }
         schema {
             query: RootQuery
@@ -24,11 +39,18 @@ app.use(
     `),
     rootValue: {
       events: () => {
-        return ['Romantic Cooking', 'Sailing', 'All-Night Coding'];
+        return events;
       },
-      createEvent: (args) => {
-        const eventName = args.name;
-        return eventName;
+      createEvent: args => {
+       const events = {
+            _id:args.Math.random().toString(),
+            title:args.eventinput.title,
+            description:args.eventinput.description,
+            price:+args.eventinput.price,
+            date:new Date().toISOString(),
+
+        };
+        events.push(events);
       }
     },
     graphiql: true
