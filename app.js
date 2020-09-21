@@ -22,6 +22,7 @@ app.use(
           date: String!
         }
         input EventInput {
+          
           title: String!
           description: String!
           price: Float!
@@ -77,7 +78,7 @@ mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${
       process.env.MONGO_PASSWORD
-    }@cluster0-ntrwp.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
+    }@cluster0.rsiaf.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
   , { useNewUrlParser: true })
   .then(() => {
     app.listen(3000);
