@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/wael93/event-booking-GraphQL-Reactjs#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "eslint": "^7.8.1",
     "express": "^4.17.1",
