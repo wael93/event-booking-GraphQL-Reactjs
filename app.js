@@ -84,7 +84,7 @@ app.use(
             throw err;
           });
       },
-      creatUser:args=>{
+      creatUser: args =>{
        return bcrypt.hash(args.userInput.password , 12)
        .then(hashpassword=>{
         const user = new User({
@@ -112,7 +112,7 @@ mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${
       process.env.MONGO_PASSWORD
-    }@cluster0.rsiaf.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
+    }@cluster0.rsiaf.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&ssl=true`
   , { useNewUrlParser: true })
   .then(() => {
     app.listen(3000);
